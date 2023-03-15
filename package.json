@@ -5,7 +5,7 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "dependencies": {
-    "@nestjs/common": "^7.1.2",
+    "@nestjs/common": "^9.3.9",
     "@thefirstspine/logs": "^2.0.0"
   },
   "devDependencies": {
