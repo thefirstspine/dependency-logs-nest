@@ -13,15 +13,8 @@ export class LogsService {
   protected tfsLogsService: TFSLogsService;
 
   constructor() {
-    const postgres: boolean =
-      process.env.LOGS_PG_USERNAME != undefined &&
-      process.env.LOGS_PG_PASSWORD != undefined &&
-      process.env.LOGS_PG_HOST != undefined &&
-      process.env.LOGS_PG_PORT != undefined &&
-      process.env.LOGS_PG_DATABASE != undefined;
     this.tfsLogsService = new TFSLogsService({
       console: true,
-      postgres,
     });
   }
 
