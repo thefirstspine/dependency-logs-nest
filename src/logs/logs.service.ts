@@ -15,6 +15,7 @@ export class LogsService {
   constructor() {
     this.tfsLogsService = new TFSLogsService({
       console: true,
+      loggly: (process.env.LOGS_LOGGLY_SUBDOMAIN != undefined && process.env.LOGS_LOGGLY_TOKEN != undefined)
     });
   }
 
