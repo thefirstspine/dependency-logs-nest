@@ -1,13 +1,21 @@
 import { Injectable, NestMiddleware, Logger } from '@nestjs/common';
 import { LogsService } from '@thefirstspine/logs';
+import { LogsService as TFSLogsService } from '@thefirstspine/logs';
 
 import { Request, Response, NextFunction } from 'express';
 
 @Injectable()
 export class RequestsLoggerMiddleware implements NestMiddleware {
-  constructor(
-    private readonly logsService: LogsService,
-  ) {}
+
+  private readonly logsService: LogsService;
+
+  constructor() {
+    this.logsService = new TFSLogsService({
+      console: true,
+      loggly: (process.env.LOGS_LOGGLY_SUBDOMAIN != undefined && process.env.LOGS_LOGGLY_TOKEN != undefined),
+      datadog: (process.env.LOGS_DD_API_KEY != undefined),
+    });
+  }
     
   use(request: Request, response: Response, next: NextFunction): void {
     try {
