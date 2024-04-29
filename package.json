@@ -1,13 +1,13 @@
 {
   "name": "@thefirstspine/logs-nest",
-  "version": "7.1.4",
+  "version": "8.0.0",
   "description": "Built on top of @thefirstspine/logs. Provides Nest services.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "dependencies": {
-    "@nestjs/common": "^10.3.7",
+    "@nestjs/common": "^10.3.8",
     "@nestjs/platform-express": "^10.3.8",
-    "@thefirstspine/logs": "^7.0.2"
+    "@thefirstspine/logs": "^8.0.1"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
@@ -19,7 +19,7 @@
     "rimraf": "^5.0.5",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.4"
+    "typescript": "^5.4.5"
   },
   "scripts": {
     "build": "rimraf ./lib && tsc -b",
