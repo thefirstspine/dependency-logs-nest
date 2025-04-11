@@ -1,13 +1,13 @@
 {
   "name": "@thefirstspine/logs-nest",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "description": "Built on top of @thefirstspine/logs. Provides Nest services.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "dependencies": {
     "@nestjs/common": "^11.0.11",
     "@nestjs/platform-express": "^11.0.11",
-    "@thefirstspine/logs": "^8.1.4"
+    "@thefirstspine/logs": "^9.0.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
